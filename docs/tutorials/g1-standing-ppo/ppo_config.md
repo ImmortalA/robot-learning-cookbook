@@ -11,15 +11,13 @@ Instead of configuring PPO from scratch, you **inherit** from Isaac Lab’s buil
 
 and specialize it for the G1 standing task.
 
-### Target file
+---
 
-Edit:
+### Steps
 
-- `source/g1_stand/g1_stand/tasks/manager_based/g1_stand/agents/rsl_rl_ppo_cfg.py`
-
-### PPO config code
-
-Replace the content of `rsl_rl_ppo_cfg.py` with:
+!!! success "Replace PPO runner config (`rsl_rl_ppo_cfg.py`)"
+    1. **Open** this file: `source/g1_stand/g1_stand/tasks/manager_based/g1_stand/agents/rsl_rl_ppo_cfg.py`
+    2. **Replace** the entire file contents with the code in the block below.
 
 ```python
 from isaaclab.utils import configclass
@@ -48,7 +46,9 @@ class G1StandFlatPPORunnerCfg(G1FlatPPORunnerCfg):
         self.policy.critic_hidden_dims = [256, 128, 128]
 ```
 
-### What this configuration does
+---
+
+### What this does
 
 - **Inherits a sensible PPO baseline**  
   The parent `G1FlatPPORunnerCfg` is tuned for G1 flat-ground locomotion and already sets:
@@ -82,11 +82,11 @@ class G1StandFlatPPORunnerCfg(G1FlatPPORunnerCfg):
 > - Adjust `num_steps_per_env` in the parent config file.
 > - Change `entropy_coef` or `learning_rate` in the parent config to encourage more or less exploration.
 
-### Your turn – PPO checklist
+### Checklist
 
-After editing `rsl_rl_ppo_cfg.py`, verify that:
+After editing `rsl_rl_ppo_cfg.py`:
 
-- The file defines `G1StandFlatPPORunnerCfg` and it inherits from `G1FlatPPORunnerCfg`.
-- `self.experiment_name` is set to `"g1_stand_flat"` so logs will go under `logs/rsl_rl/g1_stand_flat/`.
-- `max_iterations` and the actor/critic hidden sizes are set as above (you can tune them later, but keep them as‑is for this tutorial).
+- The file defines `G1StandFlatPPORunnerCfg` inheriting from `G1FlatPPORunnerCfg`.
+- `self.experiment_name` is `"g1_stand_flat"` (logs go to `logs/rsl_rl/g1_stand_flat/`).
+- `max_iterations` and actor/critic hidden sizes match the block above (you can tune later).
 

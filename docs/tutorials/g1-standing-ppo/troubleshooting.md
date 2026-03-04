@@ -13,11 +13,12 @@ gym.error.UnregisteredEnv: No registered env with id: G1-Stand-Flat-v0
 **Possible causes and fixes:**
 
 - **Extension not installed (or not in this environment)**  
-  - Reinstall from the project root:
 
-    ```bash
-    python -m pip install -e source/g1_stand
-    ```
+    !!! success "Reinstall the extension"
+        From the extension project root (`<G1_STAND_ROOT>`):
+        ```bash
+        python -m pip install -e source/g1_stand
+        ```
 
 - **Typo in Gym ID**  
   - Ensure the ID in `__init__.py` matches the one you pass to `--task`:
@@ -45,12 +46,10 @@ and not your new `G1-Stand-Flat-*` environments.
 
 **Fix:**
 
-- Use the Python snippet from the “Install & Check” step to print envs whose ID contains `"G1-Stand-Flat"`.
-- Or simply run training:
-
-  ```bash
-  python scripts/rsl_rl/train.py --task G1-Stand-Flat-v0 --headless --num_envs 1024
-  ```
+!!! success "Run training to verify registration"
+    ```bash
+    python scripts/rsl_rl/train.py --task G1-Stand-Flat-v0 --headless --num_envs 1024
+    ```
 
 ### AttributeError on reward terms
 
@@ -69,13 +68,12 @@ AttributeError: 'G1Rewards' object has no attribute 'base_height_l2'
 
 **Fix:**
 
-- Use `hasattr(self.rewards, "...")` before adjusting weights (as shown in the environment config step).  
-  For example:
-
-  ```python
-  if hasattr(self.rewards, "base_height_l2"):
-      self.rewards.base_height_l2.weight = -1.0
-  ```
+!!! success "Guard reward weights with `hasattr`"
+    In `g1_stand_env_cfg.py`:
+    ```python
+    if hasattr(self.rewards, "base_height_l2"):
+        self.rewards.base_height_l2.weight = -1.0
+    ```
 
 ### GPU out-of-memory (OOM) during training
 
@@ -87,11 +85,10 @@ RuntimeError: CUDA out of memory ...
 
 **Fix:**
 
-- Reduce the number of parallel environments:
-
-  ```bash
-  python scripts/rsl_rl/train.py --task G1-Stand-Flat-v0 --headless --num_envs 512
-  ```
+!!! success "Reduce parallel envs (e.g. 512)"
+    ```bash
+    python scripts/rsl_rl/train.py --task G1-Stand-Flat-v0 --headless --num_envs 512
+    ```
 
 - Optionally:
   - Decrease `num_steps_per_env` in the parent PPO config.
@@ -109,21 +106,15 @@ No dashboards are active for the current data set.
 
 **Fix:**
 
-- Make sure you point TensorBoard at the **directory**:
-
-  ```bash
-  tensorboard --logdir logs/rsl_rl/g1_stand_flat --port 6006
-  ```
-
-- Verify event files exist:
-
-  ```bash
-  ls logs/rsl_rl/g1_stand_flat/*/events.out.tfevents*
-  ```
-
-  - If none exist:
-    - Ensure you ran training long enough.
-    - Confirm TensorBoard is installed in the same environment.
+!!! success "Point TensorBoard at log directory (not a .pt file)"
+    ```bash
+    tensorboard --logdir logs/rsl_rl/g1_stand_flat --port 6006
+    ```
+    If the UI is empty, verify event files exist:
+    ```bash
+    ls logs/rsl_rl/g1_stand_flat/*/events.out.tfevents*
+    ```
+    If none exist, ensure you ran training long enough and that TensorBoard is installed in the same environment.
 
 ### Robot not standing still
 
@@ -131,26 +122,14 @@ No dashboards are active for the current data set.
 
 - In the play environment, the G1 humanoid walks, drifts, or oscillates instead of standing.
 
-**Checklist:**
+**Fix:**
 
-- In `G1StandFlatEnvCfg`:
-  - Commands:
+!!! success "Check env config (commands and rewards)"
+    In `g1_stand_env_cfg.py` (`G1StandFlatEnvCfg`), ensure:
+    - Commands are zero: `lin_vel_x`, `lin_vel_y`, `ang_vel_z` all `(0.0, 0.0)`.
+    - Velocity tracking rewards are disabled: `track_lin_vel_xy_exp.weight = 0.0`, `track_ang_vel_z_exp.weight = 0.0`.
+    - Standing rewards have non-zero weights: `flat_orientation_l2`, `lin_vel_z_l2`, `ang_vel_xy_l2`, etc.
 
-    ```python
-    self.commands.base_velocity.ranges.lin_vel_x = (0.0, 0.0)
-    self.commands.base_velocity.ranges.lin_vel_y = (0.0, 0.0)
-    self.commands.base_velocity.ranges.ang_vel_z = (0.0, 0.0)
-    ```
-
-  - Velocity tracking rewards:
-
-    ```python
-    self.rewards.track_lin_vel_xy_exp.weight = 0.0
-    self.rewards.track_ang_vel_z_exp.weight = 0.0
-    ```
-
-  - Standing rewards have non-trivial weights (`flat_orientation_l2`, `lin_vel_z_l2`, `ang_vel_xy_l2`, etc.).
-
-- In `G1StandFlatPPORunnerCfg`:
-  - `max_iterations` is large enough for the policy to converge (e.g., 1500+).
+!!! success "Check PPO config (`max_iterations`)"
+    In `rsl_rl_ppo_cfg.py` (`G1StandFlatPPORunnerCfg`): set `max_iterations` to at least 1500 (or higher if needed).
 

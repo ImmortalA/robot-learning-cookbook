@@ -10,24 +10,24 @@ Conceptually, training will:
 
 All commands in this step are run from the **extension project root** (`<G1_STAND_ROOT>`).
 
-### Basic training command
+---
 
-```bash
-python scripts/rsl_rl/train.py --task G1-Stand-Flat-v0 --headless --num_envs 4096
-```
+### Run
 
-- **`--task G1-Stand-Flat-v0`**  
-  Selects the training environment you registered in `__init__.py`.
+!!! success "Start training (headless)"
+    From `<G1_STAND_ROOT>`, run:
 
-- **`--headless`**  
-  Runs Isaac Lab without a GUI, which is ideal for long training runs.
+    ```bash
+    python scripts/rsl_rl/train.py --task G1-Stand-Flat-v0 --headless --num_envs 4096
+    ```
 
-- **`--num_envs 4096`**  
-  Overrides the number of parallel environments. You can reduce this if your GPU has less memory, for example:
+    If your GPU has less memory, use fewer envs:
 
-  ```bash
-  python scripts/rsl_rl/train.py --task G1-Stand-Flat-v0 --headless --num_envs 1024
-  ```
+    ```bash
+    python scripts/rsl_rl/train.py --task G1-Stand-Flat-v0 --headless --num_envs 1024
+    ```
+
+**What the flags do:** `--task G1-Stand-Flat-v0` selects your registered env; `--headless` runs without GUI; `--num_envs` sets parallel environments (lower if OOM).
 
 During training, logs and checkpoints are written under:
 
@@ -41,29 +41,18 @@ self.experiment_name = "g1_stand_flat"
 
 in `G1StandFlatPPORunnerCfg`.
 
-### Common CLI variations
+### Optional: other commands
 
-- **Change maximum iterations from the command line**:
+!!! note "Override max iterations from CLI"
+    ```bash
+    python scripts/rsl_rl/train.py --task G1-Stand-Flat-v0 --headless --num_envs 2048 --max_iterations 2000
+    ```
 
-  ```bash
-  python scripts/rsl_rl/train.py \
-    --task G1-Stand-Flat-v0 \
-    --headless \
-    --num_envs 2048 \
-    --max_iterations 2000
-  ```
-
-- **Record training videos** (if your environment and hardware allow it):
-
-  ```bash
-  python scripts/rsl_rl/train.py \
-    --task G1-Stand-Flat-v0 \
-    --num_envs 512 \
-    --video --video_interval 2000 --video_length 200
-  ```
-
-> **Tip**  
-> Video recording increases computational load. Start with headless training and add video recording once the pipeline works.
+!!! note "Record training videos"
+    ```bash
+    python scripts/rsl_rl/train.py --task G1-Stand-Flat-v0 --num_envs 512 --video --video_interval 2000 --video_length 200
+    ```
+    Video recording is heavier; use after you've confirmed headless training runs successfully.
 
 ### Monitoring progress
 
@@ -73,7 +62,7 @@ Training typically prints:
 - Reward statistics (mean/median).
 - Loss values.
 
-You can also monitor training via TensorBoard (see **Inspect Training with TensorBoard**).
+You can also monitor training via TensorBoard (see **Visualization → Inspect training with TensorBoard**).
 
 ### Expected training outcome
 
@@ -116,23 +105,15 @@ How fast this happens depends on:
 > - Lower `--num_envs` (e.g., 256–1024).
 > - Run fewer iterations first to validate the setup, then scale up.
 
-### Your turn – run a training session
+### Checklist after running
 
-Try the basic command now from `<G1_STAND_ROOT>`:
-
-```bash
-python scripts/rsl_rl/train.py --task G1-Stand-Flat-v0 --headless --num_envs 1024
-```
-
-Let it run for a while (for example, a few hundred iterations), then:
-
-- Check that `logs/rsl_rl/g1_stand_flat/` contains at least one run directory.
-- Inspect the console output to ensure rewards and losses are being logged.
-- Optionally, launch TensorBoard to confirm that scalars are recorded.
+- Confirm `logs/rsl_rl/g1_stand_flat/` has at least one run directory.
+- Check console for reward/loss logs.
+- Optionally open TensorBoard (see **Visualization**) to inspect scalars.
 
 ### Figure – example training curve (placeholder)
 
-_Add the actual image file under `docs/images/` (for example: `images/g1_standing_training_curve.png`)._
+_Add the actual image file under `docs/tutorials/g1-standing-ppo/images/` (for example: `g1_standing_training_curve.png`)._
 
 ![Plot: G1 standing training curve](images/g1_standing_training_curve.png)
 

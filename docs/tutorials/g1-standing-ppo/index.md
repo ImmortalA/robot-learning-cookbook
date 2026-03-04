@@ -35,10 +35,9 @@ This tutorial is organized as:
 1. **Define the standing environment**
 2. **Register Gym environments**
 3. **Configure PPO for the standing task**
-4. **Install the extension and check your task**
-5. **Train the G1 standing policy**
-6. **Visualize the learned behavior**
-7. **Troubleshoot and extend**
+4. **Train the G1 standing policy** (install the extension first if needed; see README)
+5. **Visualize the learned behavior**
+6. **Troubleshoot and extend**
 
 Use the navigation under **Tutorials → G1 standing PPO** to follow each step.
 

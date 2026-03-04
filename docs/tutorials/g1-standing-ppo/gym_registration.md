@@ -8,17 +8,15 @@ You will register:
 - `G1-Stand-Flat-v0` – training environment
 - `G1-Stand-Flat-Play-v0` – play/visualization environment
 
-Registration happens inside the `g1_stand` extension, not in IsaacLab core.
+Registration happens inside the `g1_stand` extension, not in Isaac Lab core.
 
-### Target file
+---
 
-Edit:
+### Steps
 
-- `source/g1_stand/g1_stand/tasks/manager_based/g1_stand/__init__.py`
-
-### Registration code
-
-Paste (or update) the contents of `__init__.py` to:
+!!! success "Paste registration code into `__init__.py`"
+    1. **Open** this file: `source/g1_stand/g1_stand/tasks/manager_based/g1_stand/__init__.py`
+    2. **Replace** its contents with the code in the block below (or paste the block into the file).
 
 ```python
 import gymnasium as gym
@@ -52,6 +50,8 @@ gym.register(
 )
 ```
 
+---
+
 ### What this does
 
 - **`id`**  
@@ -79,15 +79,11 @@ gym.register(
 > **Important**  
 > The strings inside `env_cfg_entry_point` and `rsl_rl_cfg_entry_point` must match the actual import paths and class names. If you rename files or classes, update these strings accordingly.
 
-### Your turn – registration checklist
+### Checklist
 
-Once you have updated `__init__.py`:
+After updating `__init__.py`:
 
-- Confirm the IDs in the file are exactly:
-  - `G1-Stand-Flat-v0`
-  - `G1-Stand-Flat-Play-v0`
-- Double‑check the entry-point strings:
-  - `G1StandFlatEnvCfg` / `G1StandFlatPlayEnvCfg` (env config)
-  - `G1StandFlatPPORunnerCfg` (PPO config)
-- Remember: this step only wires up names; you will verify that registration actually worked in the **Install & Check** step.
+- IDs are exactly `G1-Stand-Flat-v0` and `G1-Stand-Flat-Play-v0`.
+- Entry-point strings match: `G1StandFlatEnvCfg` / `G1StandFlatPlayEnvCfg` and `G1StandFlatPPORunnerCfg`.
+- You will verify registration when you run training (Step 4).
 

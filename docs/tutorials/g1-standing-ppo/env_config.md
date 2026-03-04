@@ -15,19 +15,21 @@ Our job is to **turn that locomotion task into a pure standing task** by changin
 The new configs you will create are:
 
 - `G1StandFlatEnvCfg` – main training configuration
-- `G1StandFlatEnvCfg` – play/visualization configuration
+- `G1StandFlatPlayEnvCfg` – play/visualization configuration
 
-Both live in the `g1_stand` extension, not in IsaacLab core.
+Both live in the `g1_stand` extension, not in Isaac Lab core.
 
-### Target file
+---
 
-Create or edit:
+### Steps
 
-- `source/g1_stand/g1_stand/tasks/manager_based/g1_stand/g1_stand_env_cfg.py`
-
-### Environment config code
-
-Paste the following into `g1_stand_env_cfg.py` (replacing any existing template code):
+!!! success "Create and paste env config (`g1_stand_env_cfg.py`)"
+    1. **Create or edit** this file:
+       `source/g1_stand/g1_stand/tasks/manager_based/g1_stand/g1_stand_env_cfg.py`
+    2. **Paste** the code from the block below into that file (replace any existing template code).
+    3. **Verify** (optional): in a Python REPL with Isaac Lab, run:
+       `from g1_stand.g1_stand.tasks.manager_based.g1_stand.g1_stand_env_cfg import G1StandFlatEnvCfg`
+       and confirm it imports without errors.
 
 ```python
 from isaaclab.utils import configclass
@@ -133,7 +135,9 @@ class G1StandFlatPlayEnvCfg(G1StandFlatEnvCfg):
             self.events.push_robot = None
 ```
 
-### What this configuration does
+---
+
+### What this does
 
 - **Inherits G1 flat locomotion**  
   You get the full G1 robot setup, terrain, sensors, and basic reward structure from `G1FlatEnvCfg`.
@@ -177,25 +181,17 @@ class G1StandFlatPlayEnvCfg(G1StandFlatEnvCfg):
 > Different Isaac Lab versions may not define all reward terms (for example, `base_height_l2`).  
 > By checking with `hasattr(self.rewards, "...")` before setting weights, you avoid `AttributeError` at runtime.
 
-### Your turn – environment checklist
+### Checklist
 
-After editing `g1_stand_env_cfg.py`, make sure:
+After editing `g1_stand_env_cfg.py`, confirm:
 
-- The file defines both `G1StandFlatEnvCfg` and `G1StandFlatPlayEnvCfg` classes.
-- You can open a Python REPL in your Isaac Lab environment and successfully import:
-
-  ```python
-  from g1_stand.g1_stand.tasks.manager_based.g1_stand.g1_stand_env_cfg import G1StandFlatEnvCfg
-  ```
-
-  without errors.
-- You understand, at a high level, that:
-  - Commands are now “stand still” commands.
-  - Rewards now prefer upright, low‑motion, low‑torque behavior.
+- The file defines both `G1StandFlatEnvCfg` and `G1StandFlatPlayEnvCfg`.
+- The import in step 3 above runs without errors.
+- Commands are "stand still"; rewards prefer upright, low-motion, low-torque behavior.
 
 ### Figure – standing rewards (placeholder)
 
-_Add the actual image file under `docs/images/` (for example: `images/g1_standing_rewards.png`)._
+_Add the actual image file under `docs/tutorials/g1-standing-ppo/images/` (for example: `g1_standing_rewards.png`)._
 
 ![Diagram: G1 standing reward components](images/g1_standing_rewards.png)
 
