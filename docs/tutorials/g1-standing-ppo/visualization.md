@@ -101,19 +101,16 @@ ls logs/rsl_rl/g1_stand_flat/*/events.out.tfevents*
   - Ensure you ran training long enough for logs to be written.
   - Verify that TensorBoard is installed in the same environment as training.
 
-> **Common mistake – pointing TensorBoard at a checkpoint file**  
-> TensorBoard expects a **directory** containing `events.out.tfevents...` files, not a `.pt` checkpoint.  
-> Always use:
->
-> ```bash
-> tensorboard --logdir logs/rsl_rl/g1_stand_flat
-> ```
->
-> and not something like:
->
-> ```bash
-> tensorboard --logdir logs/rsl_rl/g1_stand_flat/2026-03-03_17-31-37/model_1400.pt
-> ```
+!!! warning "Common mistake – pointing TensorBoard at a checkpoint file"
+    TensorBoard expects a **directory** containing `events.out.tfevents...` files, not a `.pt` checkpoint.  
+    Always use:
+    ```bash
+    tensorboard --logdir logs/rsl_rl/g1_stand_flat
+    ```
+    and not something like:
+    ```bash
+    tensorboard --logdir logs/rsl_rl/g1_stand_flat/2026-03-03_17-31-37/model_1400.pt
+    ```
 
 ### Figures – example visuals (placeholders)
 

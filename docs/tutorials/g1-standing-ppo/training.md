@@ -100,10 +100,10 @@ How fast this happens depends on:
   - PPO hyperparameters in `G1StandFlatPPORunnerCfg`.
   - Whether the robot is actually standing in the play environment (see the next step).
 
-> **Hardware tip**  
-> If you run on a laptop GPU or a card with limited VRAM, it is perfectly fine to:
-> - Lower `--num_envs` (e.g., 256–1024).
-> - Run fewer iterations first to validate the setup, then scale up.
+!!! tip "Hardware tip"
+    If you run on a laptop GPU or a card with limited VRAM, it is perfectly fine to:
+    - Lower `--num_envs` (e.g., 256–1024).
+    - Run fewer iterations first to validate the setup, then scale up.
 
 ### Checklist after running
 

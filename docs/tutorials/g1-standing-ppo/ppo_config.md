@@ -76,11 +76,11 @@ class G1StandFlatPPORunnerCfg(G1FlatPPORunnerCfg):
   - `max_iterations = 1500` – total training iterations.
   - Actor/critic MLPs are set to `[256, 128, 128]`, which is typically sufficient for a standing task.
 
-> **Tip – tuning PPO**  
-> If the policy is not stable or converges slowly, you can:
-> - Increase or decrease `max_iterations`.
-> - Adjust `num_steps_per_env` in the parent config file.
-> - Change `entropy_coef` or `learning_rate` in the parent config to encourage more or less exploration.
+!!! tip "Tuning PPO"
+    If the policy is not stable or converges slowly, you can:
+    - Increase or decrease `max_iterations`.
+    - Adjust `num_steps_per_env` in the parent config file.
+    - Change `entropy_coef` or `learning_rate` in the parent config to encourage more or less exploration.
 
 ### Checklist
 

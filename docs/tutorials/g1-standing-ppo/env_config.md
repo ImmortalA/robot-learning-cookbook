@@ -177,9 +177,9 @@ class G1StandFlatPlayEnvCfg(G1StandFlatEnvCfg):
 
   All of these are wrapped in `hasattr` checks so the code works even if some terms are not present in your Isaac Lab version.
 
-> **Common mistake – missing reward attributes**  
-> Different Isaac Lab versions may not define all reward terms (for example, `base_height_l2`).  
-> By checking with `hasattr(self.rewards, "...")` before setting weights, you avoid `AttributeError` at runtime.
+!!! warning "Common mistake – missing reward attributes"
+    Different Isaac Lab versions may not define all reward terms (for example, `base_height_l2`).  
+    By checking with `hasattr(self.rewards, "...")` before setting weights, you avoid `AttributeError` at runtime.
 
 ### Checklist
 

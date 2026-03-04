@@ -76,8 +76,8 @@ gym.register(
 
   - `G1StandFlatPPORunnerCfg` (defined in the agents module)
 
-> **Important**  
-> The strings inside `env_cfg_entry_point` and `rsl_rl_cfg_entry_point` must match the actual import paths and class names. If you rename files or classes, update these strings accordingly.
+!!! warning "Important"
+    The strings inside `env_cfg_entry_point` and `rsl_rl_cfg_entry_point` must match the actual import paths and class names. If you rename files or classes, update these strings accordingly.
 
 ### Checklist
 
