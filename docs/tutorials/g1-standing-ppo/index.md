@@ -2,6 +2,8 @@
 
 In this hands-on tutorial, you will train a **G1 humanoid** to stand still on flat terrain using **PPO** in Isaac Lab.
 
+![Diagram: G1 standing](images/unitree_g1_stand.png)
+
 You will:
 
 - Reuse Isaac Lab’s built-in G1 flat locomotion config.
@@ -39,12 +41,4 @@ This tutorial is organized as:
 7. **Troubleshoot and extend**
 
 Use the navigation under **Tutorials → G1 standing PPO** to follow each step.
-
-### Figure – tutorial roadmap (placeholder)
-
-_Add the actual image file under `docs/images/` (for example: `images/g1_standing_roadmap.png`)._
-
-![Diagram: G1 standing tutorial roadmap](images/g1_standing_roadmap.png)
-
-> **Figure:** High-level view of this lab: starting from an Isaac Lab extension, defining the standing environment, wiring up Gym and PPO, then training and visualizing the learned policy.
 
