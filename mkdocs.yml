@@ -1,0 +1,35 @@
+site_name: Robot Learning Cookbook
+site_description: "Hands-on Isaac Lab tutorials for training humanoid robots."
+site_author: "g1_stand project"
+
+theme:
+  name: material
+  features:
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+
+nav:
+  - Home: index.md
+  - Tutorials:
+      - G1 standing with PPO:
+          - Overview: tutorials/g1-standing-ppo/index.md
+          - Environment config: tutorials/g1-standing-ppo/env_config.md
+          - Gym registration: tutorials/g1-standing-ppo/gym_registration.md
+          - Configure PPO: tutorials/g1-standing-ppo/ppo_config.md
+          - Training: tutorials/g1-standing-ppo/training.md
+          - Visualization: tutorials/g1-standing-ppo/visualization.md
+          - Troubleshooting: tutorials/g1-standing-ppo/troubleshooting.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+
+extra:
+  generator: false
+
