@@ -1,8 +1,8 @@
 ## G1 Stand Docs Site – MkDocs Material
 
-This folder contains a standalone **MkDocs Material** documentation site for the `g1_stand` Isaac Lab extension.
+This repository contains a standalone **MkDocs Material** documentation site for the `g1_stand` Isaac Lab extension.
 
-- MkDocs config: `mkdocs.yml`
+- MkDocs config: `mkdocs.yml` (at repo root)
 - Docs source: `docs/`
 - Output (after build): `site/` (ignored by git by default, if configured)
 
@@ -32,10 +32,9 @@ These provide:
 
 ## 2. Serve the docs locally
 
-From the **`docs_site/`** directory:
+From the **repository root**:
 
 ```bash
-cd docs_site
 mkdocs serve
 ```
 
@@ -49,35 +48,44 @@ Changes you make in `docs/` will be auto-reloaded in the browser.
 
 ## 3. Build the static site
 
-To build a static version of the site (HTML, CSS, JS) into the `site/` folder:
+To build a static version of the site (HTML, CSS, JS) into the `site/` folder from the repo root:
 
 ```bash
-cd docs_site
 mkdocs build
 ```
 
 This generates:
 
-- `docs_site/site/` – a self-contained static website that you can serve from any static host.
+- `site/` – a self-contained static website that you can serve from any static host.
 
 ---
 
 ## 4. Deploy to GitHub Pages
 
-MkDocs has built-in support for deploying to GitHub Pages via a single command.
+There are two ways to deploy:
 
-### 4.1. Prerequisites
+- **Automatic deploy (recommended)** – via GitHub Actions (runs on every push to `main`)
+- **Manual deploy** – run `mkdocs gh-deploy` yourself
 
-- Your repository is hosted on GitHub.
-- You have git remotes set up (for example, `origin`).
-- You have permission to push to the repository.
+### 4.1. Automatic deploy via GitHub Actions
 
-### 4.2. Deploy with `mkdocs gh-deploy`
+This repository includes `.github/workflows/docs.yml`, which:
 
-From the **`docs_site/`** directory:
+- Installs MkDocs and dependencies
+- Builds the site
+- Publishes it to the `gh-pages` branch using `mkdocs gh-deploy`
+
+Once you push to `main` on GitHub, the workflow will run and update the live site at:
+
+- `https://immortala.github.io/robot-learning-cookbook/`
+
+You can see workflow runs under the **Actions** tab in GitHub.
+
+### 4.2. Manual deploy with `mkdocs gh-deploy`
+
+From the **repository root**:
 
 ```bash
-cd docs_site
 mkdocs gh-deploy
 ```
 
@@ -85,14 +93,7 @@ This will:
 
 - Build the site
 - Push the generated static content to the `gh-pages` branch of your repository
-- Optionally configure GitHub Pages to serve from that branch
-
-After the command completes, visit your project’s GitHub Pages URL, typically:
-
-- `https://<your-username>.github.io/<your-repo-name>/`
-
-> **Tip**  
-> You can customize the GitHub Pages settings (source branch/folder) in the repository’s **Settings → Pages** in the GitHub UI if needed.
+- Update the GitHub Pages site
 
 ---
 
