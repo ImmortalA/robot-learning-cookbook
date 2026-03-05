@@ -2,7 +2,9 @@
 
 In this hands-on tutorial, you will train a **G1 humanoid** to stand still on flat terrain using **PPO** in Isaac Lab.
 
-![Diagram: G1 standing](images/unitree_g1_stand.png)
+![G1 humanoid standing on flat terrain](images/unitree_g1_stand.png)
+
+> **Figure:** The end result of this lab – a G1 humanoid that can stand upright on flat terrain using a learned PPO policy.
 
 You will:
 

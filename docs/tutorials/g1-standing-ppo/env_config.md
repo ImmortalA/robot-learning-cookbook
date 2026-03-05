@@ -189,11 +189,3 @@ After editing `g1_stand_env_cfg.py`, confirm:
 - The import in step 3 above runs without errors.
 - Commands are "stand still"; rewards prefer upright, low-motion, low-torque behavior.
 
-### Figure – standing rewards (placeholder)
-
-_Add the actual image file under `docs/tutorials/g1-standing-ppo/images/` (for example: `g1_standing_rewards.png`)._
-
-![Diagram: G1 standing reward components](images/g1_standing_rewards.png)
-
-> **Figure:** Conceptual visualization of the main standing rewards (orientation, height, base velocities, joint deviation, action smoothness, torques) and how they work together to encourage a stable upright pose.
-

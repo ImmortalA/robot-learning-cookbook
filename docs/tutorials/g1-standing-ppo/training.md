@@ -64,6 +64,14 @@ Training typically prints:
 
 You can also monitor training via TensorBoard (see **Visualization → Inspect training with TensorBoard**).
 
+### What the terminal should look like
+
+When everything is wired up correctly and `train.py` is running, your terminal will look roughly like this:
+
+![Screenshot: training terminal output](images/training_terminal.png)
+
+> **Figure:** Example RSL-RL training output in the terminal (iteration, reward stats, and reward term breakdown) for the G1 standing task.
+
 ### Expected training outcome
 
 If everything is wired correctly, you should see over time:
