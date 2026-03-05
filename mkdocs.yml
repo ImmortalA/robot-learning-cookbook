@@ -33,3 +33,14 @@ markdown_extensions:
 extra:
   generator: false
 
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://tranducanh.net/
+      name: Personal website
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/tran-ducanh/
+      name: LinkedIn
+    - icon: fontawesome/brands/github
+      link: https://github.com/ImmortalA
+      name: GitHub
+
