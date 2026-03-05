@@ -2,6 +2,10 @@
 
 This repository contains a standalone **MkDocs Material** documentation site for the `g1_stand` Isaac Lab extension.
 
+The live site is available at:
+
+- [`https://immortala.github.io/robot-learning-cookbook/`](https://immortala.github.io/robot-learning-cookbook/)
+
 - MkDocs config: `mkdocs.yml` (at repo root)
 - Docs source: `docs/`
 - Output (after build): `site/` (ignored by git by default, if configured)
