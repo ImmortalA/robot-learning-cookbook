@@ -54,6 +54,8 @@ gym.register(
 
 ### What this does
 
+Here, **“environment”** means the RL task (robot, scene, and rewards), not your Python/conda environment.
+
 - **`id`**  
   Names the environment in Gym’s global registry:
 
@@ -85,5 +87,5 @@ After updating `__init__.py`:
 
 - IDs are exactly `G1-Stand-Flat-v0` and `G1-Stand-Flat-Play-v0`.
 - Entry-point strings match: `G1StandFlatEnvCfg` / `G1StandFlatPlayEnvCfg` and `G1StandFlatPPORunnerCfg`.
-- You will verify registration when you run training (Step 4).
+- You’ll confirm it worked in Step 4 when you run `train.py` and training starts without “env not found” errors.
 

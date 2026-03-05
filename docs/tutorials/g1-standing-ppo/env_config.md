@@ -189,3 +189,5 @@ After editing `g1_stand_env_cfg.py`, confirm:
 - The import in step 3 above runs without errors.
 - Commands are "stand still"; rewards prefer upright, low-motion, low-torque behavior.
 
+When you run training (Step 4), the trainer will use this env config.
+

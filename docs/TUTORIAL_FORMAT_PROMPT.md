@@ -6,9 +6,9 @@ When creating a new tutorial in this docs site, follow the same structure and st
 
 ## 1. Tutorial structure
 
-- **One overview page** (`index.md`): title, short intro, “You will” bullet list, **Prerequisites**, **Tutorial flow** (numbered list matching the step pages), and a note to use the sidebar nav.
+- **One overview page** (`index.md`): title, short intro, **“Why start with this task?”** (one short paragraph: why this task is a good first step—e.g. minimal stable behavior, clear feedback loop, extends to harder tasks), “You will” bullet list, **Prerequisites**, **Tutorial flow** (numbered list matching the step pages), and a note to use the sidebar nav.
 - **Step pages**: one page per major step. Use the heading pattern **`## Step N – Short title`** (e.g. `## Step 1 – Define the Standing Environment`).
-- **Optional final page**: **Troubleshooting** with symptom → explanation → fix, using admonitions for the “do this” parts.
+- **Optional final page**: **Troubleshooting** with a **“Where things live”** line at the top (see §5), then symptom → explanation → fix, using admonitions for the “do this” parts.
 
 ---
 
@@ -24,7 +24,7 @@ For each step page, use this order:
    - For “run a command” steps: use **`### Run`** and a **`!!! success "Descriptive title"`** (e.g. “Start training (headless)”) with the command(s) inside. Add optional variants in **`!!! note "…"`** blocks.
 5. **Horizontal rule** before explanation (if needed).
 6. **Explanation section**: **`### What this does`** (or “What this configuration does” only if you need the longer phrase). Use bullet points and sub-bullets; include short code snippets where they help. Do **not** repeat the full paste block here.
-7. **Checklist**: **`### Checklist`** with a short bullet list of what to confirm after the step (e.g. “File defines X and Y”, “Import runs without errors”).
+7. **Checklist**: **`### Checklist`** with a short bullet list of what to confirm after the step (e.g. “File defines X and Y”, “Import runs without errors”). Optionally add **one line** on what the reader will see or verify later (e.g. “When you run training (Step 4), the trainer will use this env” or “You’ll confirm it worked in Step 4 when you run `train.py` and training starts.”).
 8. **Figures** (optional): **`### Figure – … (placeholder)`** with italic note like “_Add the actual image file under `docs/tutorials/<tutorial-name>/images/`_”, then the image markdown and a `> **Figure:**` caption.
 
 ---
@@ -45,7 +45,9 @@ All admonition content must be indented with **4 spaces**. Use descriptive title
 ## 4. Terminology and style
 
 - **Isaac Lab**: always two words (not “IsaacLab”), including “Isaac Lab core”.
-- **Extension project root**: when referring to the repo root where the extension lives, say “extension project root” and show the placeholder as **`<G1_STAND_ROOT>`** (or the relevant placeholder for that tutorial, e.g. `<MY_EXT_ROOT>`).
+- **Extension project root**: when referring to the repo root where the extension lives, say “extension project root” and show the placeholder as **`<G1_STAND_ROOT>`** (or the relevant placeholder for that tutorial, e.g. `<MY_EXT_ROOT>`). **Define it once** (e.g. on the home page or tutorial overview): “That path is **`<G1_STAND_ROOT>`**” or “**`<G1_STAND_ROOT>`** = the root of your extension project (the folder containing `source/`, `scripts/`, `logs/`, etc.).”
+- **“Create an Isaac Lab project”**: if you say this, add one sentence so newbies know what it means: e.g. “That means having a project folder (often named or containing the extension, e.g. `g1_stand`) with the structure expected by Isaac Lab, and knowing its path—that path is `<G1_STAND_ROOT>`.”
+- **“Environment”**: when you mean the RL task (robot, scene, rewards), disambiguate once (e.g. in “What this does” for registration): “Here, ‘environment’ means the RL task (robot + rewards), not your Python/conda environment.”
 - **Cross-references**: point to other steps by name and section, e.g. “see **Visualization → Inspect training with TensorBoard**” or “when you run training (Step 4)”.
 - **Placeholder image paths**: use `docs/tutorials/<tutorial-slug>/images/` (e.g. `docs/tutorials/g1-standing-ppo/images/`) in placeholder notes.
 
@@ -53,6 +55,7 @@ All admonition content must be indented with **4 spaces**. Use descriptive title
 
 ## 5. Troubleshooting page format
 
+- **Start with “Where things live”**: right after the intro, add one line so lost readers know where files and commands live: “All paths below are relative to **`<G1_STAND_ROOT>`** (the root of your extension project). For example: `source/g1_stand/...`, `scripts/rsl_rl/...`, `logs/rsl_rl/...`.”
 - Use **`### Short issue name (optional code term)`** for each issue (e.g. `### Environment not found (UnregisteredEnv)`).
 - For each issue include:
   - **Symptom:** (bold) then error text or description, optionally in a ` ```text ` block.
@@ -72,8 +75,12 @@ All admonition content must be indented with **4 spaces**. Use descriptive title
 - [ ] Every reader action is in a **`!!! success`** or **`!!! note`** admonition with a **specific title** (no generic “Do this”).
 - [ ] No blockquote callouts (`> **Note**` etc.); all callouts use **`!!! type "Title"`** admonitions.
 - [ ] “Isaac Lab” (two words) and “extension project root” used consistently.
-- [ ] Step pages have **Steps** or **Run** → code/commands → **What this does** → **Checklist** (and optional Figure).
+- [ ] **`<G1_STAND_ROOT>`** (or tutorial placeholder) is **defined once** (home page or overview); “Create an Isaac Lab project” is clarified (folder + path).
+- [ ] Where “environment” means the RL task, it’s disambiguated from Python/conda env (e.g. one sentence in “What this does”).
+- [ ] Step pages have **Steps** or **Run** → code/commands → **What this does** → **Checklist** (and optional Figure). Checklists optionally include “what you’ll see/verify in a later step.”
+- [ ] Troubleshooting page starts with a **“Where things live”** line (paths relative to `<G1_STAND_ROOT>`).
 - [ ] Tutorial flow on the overview page matches the step pages and nav.
+- [ ] Overview includes a short **“Why start with this task?”** (or equivalent) if it’s the recommended first tutorial.
 - [ ] Placeholder figure paths use `docs/tutorials/<tutorial-slug>/images/`.
 
 Use the existing **G1 standing PPO** tutorial under `docs/tutorials/g1-standing-ppo/` as the reference implementation for this format.

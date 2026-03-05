@@ -10,6 +10,8 @@ If you do just one thing on this site, do this tutorial:
 
 - **Tutorial:** [G1 standing with PPO](tutorials/g1-standing-ppo/index.md)
 
+**Why start with standing?** Standing is the simplest stable behavior for a humanoid: the robot learns to balance and stay upright without the extra complexity of walking or manipulation. You get a clear loop (rewards, policy, training) and see results quickly. Once that works, the same setup extends to locomotion, stepping, and other tasks.
+
 In that lab you will:
 
 - Create an Isaac Lab extension (`g1_stand`) for humanoids.
@@ -26,7 +28,7 @@ You only need:
 !!! info "Before you start any tutorial"
     Do these two things before following any lab on this site:
 
-    1. **Create an Isaac Lab project / workspace** (e.g. an extension like `g1_stand` under a root such as `<G1_STAND_ROOT>`).
+    1. **Create an Isaac Lab project / workspace.** That means having a project folder (often named or containing `g1_stand`) with the structure expected by Isaac Lab—e.g. `source/g1_stand/`, `scripts/`—and knowing its path. That path is **`<G1_STAND_ROOT>`**; you’ll run all tutorial commands from there.
     2. **Activate your Isaac Lab Python environment** in the terminal you use for training and play scripts (see Isaac Sim / Isaac Lab installation docs).
 
     **Video walkthrough:** The video below walks through creating a project and activating the Isaac environment step by step. Click the thumbnail to open it on YouTube.
@@ -46,6 +48,9 @@ If you haven’t installed Isaac Lab or Isaac Sim yet, use the official guides:
 - **Isaac Lab documentation (installation & usage):**  
   See the “Installation” and “Getting Started” sections in the Isaac Lab docs:  
   [`https://isaac-sim.github.io/IsaacLab`](https://isaac-sim.github.io/IsaacLab)
+
+For fundamental, step-by-step instruction on the Isaac ecosystem (Isaac Sim, Isaac Lab, robot learning, and sim-to-real), NVIDIA’s **Robotics Fundamentals** learning path is a good place to start:  
+[Robotics Fundamentals Learning Path](https://www.nvidia.com/en-us/learn/learning-path/robotics/).
 
 #### Hardware prerequisites
 
