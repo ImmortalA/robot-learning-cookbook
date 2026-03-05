@@ -23,15 +23,17 @@ You only need:
 - A working Isaac Lab install.
 - Basic Python and RL familiarity.
 
-#### Before you start any tutorial
+!!! info "Before you start any tutorial"
+    Do these two things before following any lab on this site:
 
-Before following any of the labs on this site, make sure you have:
+    1. **Create an Isaac Lab project / workspace** (e.g. an extension like `g1_stand` under a root such as `<G1_STAND_ROOT>`).
+    2. **Activate your Isaac Lab Python environment** in the terminal you use for training and play scripts (see Isaac Sim / Isaac Lab installation docs).
 
-- **Created an Isaac Lab project / workspace** (for example, an extension like `g1_stand` checked out under a root such as `<G1_STAND_ROOT>`).
-- **Activated your Isaac Lab Python environment** in the terminal you use to run training and play scripts, following the Isaac Sim / Isaac Lab installation docs.
+    **Video walkthrough:** The video below walks through creating a project and activating the Isaac environment step by step. Click the thumbnail to open it on YouTube.
 
-If you prefer a video walkthrough, this community tutorial shows the full flow of setting up a project and activating the Isaac environment step by step:  
-[Getting started with Isaac Sim / Isaac Lab (YouTube)](https://www.youtube.com/watch?v=i51krqsk8ps)
+    [![Getting started with Isaac Sim / Isaac Lab – video thumbnail](https://img.youtube.com/vi/i51krqsk8ps/hqdefault.jpg)](https://www.youtube.com/watch?v=i51krqsk8ps)
+
+    [Watch on YouTube →](https://www.youtube.com/watch?v=i51krqsk8ps)
 
 ### Prerequisites & official docs
 
