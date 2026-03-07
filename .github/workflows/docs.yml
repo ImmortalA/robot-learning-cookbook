@@ -32,6 +32,15 @@ jobs:
         run: |
           pip install mkdocs mkdocs-material pymdown-extensions mike
 
+      - name: Build docs (verify MkDocs builds)
+        run: mkdocs build --strict
+        # Fail here with a clear error if nav/links/config are broken
+
+      - name: Configure git for mike
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Deploy versioned docs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
