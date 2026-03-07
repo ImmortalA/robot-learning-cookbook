@@ -1,3 +1,8 @@
+!!! tip "New to robotics or Isaac? Learn the fundamentals first"
+    We recommend starting with NVIDIA’s **[Robotics Fundamentals Learning Path](https://www.nvidia.com/en-us/learn/learning-path/robotics/)**. It covers simulation, ROS, OpenUSD, Isaac Sim, Isaac Lab, and sim-to-real in a structured order. Once you have that foundation, the tutorials on this site will be easier to follow.
+
+    **Learning path home:** [Robotics Fundamentals](https://www.nvidia.com/en-us/learn/learning-path/robotics/) · **All courses:** [NVIDIA Learn](https://www.nvidia.com/en-us/learn/)
+
 ## Get started
 
 !!! success "Recommended first tutorial"
