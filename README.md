@@ -128,14 +128,16 @@ mike serve
 ## 5. Editing the docs
 
 - All content lives under `docs/`:
-  - `index.md` – landing page
-  - `01_overview.md` … `10_troubleshooting.md` – tutorial chapters
-  - `docs/images/` – put tutorial figures here and reference them from the markdown files
+  - `docs/index.md` – landing page (Home)
+  - `docs/tutorials/g1-standing-ppo/` – G1 standing tutorial:
+    - `index.md` – overview
+    - `env_config.md`, `gym_registration.md`, `ppo_config.md`, `training.md`, `visualization.md`, `troubleshooting.md` – step pages
+  - `docs/tutorials/<tutorial-name>/images/` – put tutorial figures here and reference them from the tutorial’s markdown (e.g. `images/figure.png`).
 - The navigation and theme configuration live in `mkdocs.yml`.
 
 To add new pages:
 
-1. Create a new `.md` file under `docs/`.
+1. Create a new `.md` file under `docs/` (e.g. under `docs/tutorials/` for a new tutorial).
 2. Add it to the `nav:` section in `mkdocs.yml`.
 
 Then run `mkdocs serve` to preview changes locally.

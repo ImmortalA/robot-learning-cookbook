@@ -2,6 +2,8 @@
 
 This page collects common issues you might encounter while setting up and training the G1 standing task, along with suggested fixes.
 
+If you haven’t completed the steps in order, start from the [Overview](index.md) or [Step 1 – Define the standing environment](env_config.md).
+
 **Where things live:** All paths below are relative to **`<G1_STAND_ROOT>`** (the root of your extension project). For example: `source/g1_stand/...`, `scripts/rsl_rl/...`, `logs/rsl_rl/g1_stand_flat/...`.
 
 ### Environment not found (`UnregisteredEnv`)

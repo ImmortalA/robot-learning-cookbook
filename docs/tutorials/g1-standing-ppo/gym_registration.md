@@ -89,3 +89,4 @@ After updating `__init__.py`:
 - Entry-point strings match: `G1StandFlatEnvCfg` / `G1StandFlatPlayEnvCfg` and `G1StandFlatPPORunnerCfg`.
 - You’ll confirm it worked in Step 4 when you run `train.py` and training starts without “env not found” errors.
 
+

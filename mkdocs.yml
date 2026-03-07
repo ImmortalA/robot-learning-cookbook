@@ -5,11 +5,39 @@ site_url: https://immortala.github.io/robot-learning-cookbook/
 
 theme:
   name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
   features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.path
+    - navigation.top
     - navigation.footer
+    - navigation.expand
     - search.suggest
     - search.highlight
-    - toc.integrate
+    - content.code.copy
+    - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
+  repo_url: https://github.com/ImmortalA/robot-learning-cookbook
+  edit_uri: edit/main/docs/
 
 nav:
   - Home: index.md
@@ -36,7 +64,15 @@ extra:
   version:
     provider: mike
     default: latest
-
+  hero:
+    title: Robot Learning Cookbook
+    subtitle: Hands-on tutorials for training humanoid robots with Isaac Lab
+    actions:
+      - text: Start the tutorial
+        link: tutorials/g1-standing-ppo/index.md
+        primary: true
+      - text: View on GitHub
+        link: https://github.com/ImmortalA/robot-learning-cookbook
   social:
     - icon: fontawesome/solid/globe
       link: https://tranducanh.net/

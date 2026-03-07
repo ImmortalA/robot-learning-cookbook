@@ -27,19 +27,17 @@ You should:
 
 If you haven’t yet:
 
-- See **Getting started → Installation** for environment setup.
-- See **Getting started → Isaac Lab basics** and **RL basics** for quick conceptual refreshers.
+- See **Home → Prerequisites & official docs** for installation and Isaac Lab setup.
+- For RL and Isaac Lab concepts, see the [Robotics Fundamentals Learning Path](https://www.nvidia.com/en-us/learn/learning-path/robotics/) or the [Isaac Lab docs](https://isaac-sim.github.io/IsaacLab).
 
 ### Tutorial flow
 
-This tutorial is organized as:
+Follow the steps in order (use the sidebar or the links below):
 
-1. **Define the standing environment**
-2. **Register Gym environments**
-3. **Configure PPO for the standing task**
-4. **Train the G1 standing policy** (install the extension first if needed; see README)
-5. **Visualize the learned behavior**
-6. **Troubleshoot and extend**
-
-Use the navigation under **Tutorials → G1 standing PPO** to follow each step.
+1. [**Define the standing environment**](env_config.md)
+2. [**Register Gym environments**](gym_registration.md)
+3. [**Configure PPO for the standing task**](ppo_config.md)
+4. [**Train the G1 standing policy**](training.md) (install the extension first if needed; see the extension README)
+5. [**Visualize the learned behavior**](visualization.md)
+6. [**Troubleshoot and extend**](troubleshooting.md)
 
