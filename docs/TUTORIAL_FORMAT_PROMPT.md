@@ -8,7 +8,7 @@ When creating a new tutorial in this docs site, follow the same structure and st
 
 ## 1. Tutorial structure
 
-- **One overview page** (`index.md`): title (e.g. `## Tutorial: G1 Standing with PPO`), short intro, optional figure with `> **Figure:**` caption, **“You will”** bullet list, **Prerequisites** (with links: **Home → Prerequisites & official docs** for installation; [Robotics Fundamentals](https://www.nvidia.com/en-us/learn/learning-path/robotics/) or [Isaac Lab docs](https://isaac-sim.github.io/IsaacLab) for concepts), and **Tutorial flow**: a **clickable** numbered list—each step is a link to its page (e.g. `1. [**Define the standing environment**](env_config.md)`). Add a short line above the list, e.g. “Follow the steps in order (use the sidebar or the links below).” For the recommended first tutorial, “Why start with this task?” can live on the home page; otherwise add a short “Why this task?” paragraph on the overview if useful.
+- **One overview page** (`index.md`): title (e.g. `## Tutorial: G1 Standing with PPO`), short intro, optional figure with `> **Figure:**` caption, **“You will”** bullet list, **Prerequisites** (with links: **Home → Prerequisites & official docs** for installation; [Robotics Fundamentals](https://www.nvidia.com/en-us/learn/learning-path/robotics/) or [Isaac Lab docs](https://isaac-sim.github.io/IsaacLab) for concepts), and **Tutorial flow**: a **clickable** numbered list—each step is a link to its page (e.g. `1. [**Define the standing environment**](tutorials/g1-standing-ppo/env_config.md)`). Add a short line above the list, e.g. “Follow the steps in order (use the sidebar or the links below).” For the recommended first tutorial, “Why start with this task?” can live on the home page; otherwise add a short “Why this task?” paragraph on the overview if useful.
 - **Step pages**: one page per major step. Use the heading pattern **`## Step N – Short title`** (e.g. `## Step 1 – Define the Standing Environment`). **Do not** add in-page “Previous: … · Next: …” links at the bottom; the theme provides previous/next navigation.
 - **Optional final page**: **Troubleshooting** with a back-link line (see §5), **“Where things live”**, then symptom → explanation → fix, using admonitions for the “do this” parts.
 
@@ -57,7 +57,7 @@ All admonition content must be indented with **4 spaces**. Use descriptive title
 
 ## 5. Troubleshooting page format
 
-- **Back-link (optional but recommended)**: right after the intro, one line for readers who landed here from search or a link: “If you haven’t completed the steps in order, start from the [Overview](index.md) or [Step 1 – …](env_config.md).” Use the actual overview and Step 1 filenames for your tutorial.
+- **Back-link (optional but recommended)**: right after the intro, one line for readers who landed here from search or a link: “If you haven’t completed the steps in order, start from the [Overview](tutorials/g1-standing-ppo/index.md) or [Step 1 – …](tutorials/g1-standing-ppo/env_config.md).” Use the actual overview and Step 1 filenames for your tutorial.
 - **Then “Where things live”**: one line so readers know where files and commands live: “All paths below are relative to **`<G1_STAND_ROOT>`** (the root of your extension project). For example: `source/g1_stand/...`, `scripts/rsl_rl/...`, `logs/rsl_rl/...`.”
 - Use **`### Short issue name (optional code term)`** for each issue (e.g. `### Environment not found (UnregisteredEnv)`).
 - For each issue include:

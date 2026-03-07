@@ -15,6 +15,8 @@
         <link rel="canonical" href="https://immortala.github.io/robot-learning-cookbook/TUTORIAL_FORMAT_PROMPT/">
       
       
+        <link rel="prev" href="../tutorials/g1-standing-ppo/troubleshooting/">
+      
       
       
         
@@ -25,7 +27,7 @@
     
     
       
-        <title>Prompt: Use this format for new tutorials - Robot Learning Cookbook</title>
+        <title>For authors - Robot Learning Cookbook</title>
       
     
     
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Prompt: Use this format for new tutorials
+              For authors
             
           </span>
         </div>
@@ -255,6 +257,27 @@
   
 
     
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  For authors
+
+      </a>
+    </li>
   
 
       
@@ -633,6 +656,157 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For authors
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For authors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-tutorial-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Tutorial structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-page-layout-for-each-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Page layout for each step
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-admonitions-callouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Admonitions (callouts)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-terminology-and-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Terminology and style
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-troubleshooting-page-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Troubleshooting page format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-navigation-and-nav-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Navigation and nav order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-checklist-before-publishing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Checklist before publishing
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -762,13 +936,14 @@
 
 
 <h1 id="prompt-use-this-format-for-new-tutorials">Prompt: Use this format for new tutorials<a class="headerlink" href="#prompt-use-this-format-for-new-tutorials" title="Permanent link">&para;</a></h1>
-<p>When creating a new tutorial in this docs site, follow the same structure and style as the <strong>G1 standing PPO</strong> tutorial (<code>docs/tutorials/g1-standing-ppo/</code>). Copy this prompt into your instructions when drafting or reviewing new tutorial content.</p>
+<p><strong>For maintainers and authors:</strong> Use this doc when you draft or review new tutorial content. Copy the relevant parts (or this whole prompt) into your instructions.</p>
+<p>When creating a new tutorial in this docs site, follow the same structure and style as the <strong>G1 standing with PPO</strong> tutorial (<code>docs/tutorials/g1-standing-ppo/</code>).</p>
 <hr />
 <h2 id="1-tutorial-structure">1. Tutorial structure<a class="headerlink" href="#1-tutorial-structure" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>One overview page</strong> (<code>index.md</code>): title, short intro, <strong>“Why start with this task?”</strong> (one short paragraph: why this task is a good first step—e.g. minimal stable behavior, clear feedback loop, extends to harder tasks), “You will” bullet list, <strong>Prerequisites</strong>, <strong>Tutorial flow</strong> (numbered list matching the step pages), and a note to use the sidebar nav.</li>
-<li><strong>Step pages</strong>: one page per major step. Use the heading pattern <strong><code>## Step N – Short title</code></strong> (e.g. <code>## Step 1 – Define the Standing Environment</code>).</li>
-<li><strong>Optional final page</strong>: <strong>Troubleshooting</strong> with a <strong>“Where things live”</strong> line at the top (see §5), then symptom → explanation → fix, using admonitions for the “do this” parts.</li>
+<li><strong>One overview page</strong> (<code>index.md</code>): title (e.g. <code>## Tutorial: G1 Standing with PPO</code>), short intro, optional figure with <code>&gt; **Figure:**</code> caption, <strong>“You will”</strong> bullet list, <strong>Prerequisites</strong> (with links: <strong>Home → Prerequisites &amp; official docs</strong> for installation; <a href="https://www.nvidia.com/en-us/learn/learning-path/robotics/">Robotics Fundamentals</a> or <a href="https://isaac-sim.github.io/IsaacLab">Isaac Lab docs</a> for concepts), and <strong>Tutorial flow</strong>: a <strong>clickable</strong> numbered list—each step is a link to its page (e.g. <code>1. [**Define the standing environment**](tutorials/g1-standing-ppo/env_config.md)</code>). Add a short line above the list, e.g. “Follow the steps in order (use the sidebar or the links below).” For the recommended first tutorial, “Why start with this task?” can live on the home page; otherwise add a short “Why this task?” paragraph on the overview if useful.</li>
+<li><strong>Step pages</strong>: one page per major step. Use the heading pattern <strong><code>## Step N – Short title</code></strong> (e.g. <code>## Step 1 – Define the Standing Environment</code>). <strong>Do not</strong> add in-page “Previous: … · Next: …” links at the bottom; the theme provides previous/next navigation.</li>
+<li><strong>Optional final page</strong>: <strong>Troubleshooting</strong> with a back-link line (see §5), <strong>“Where things live”</strong>, then symptom → explanation → fix, using admonitions for the “do this” parts.</li>
 </ul>
 <hr />
 <h2 id="2-page-layout-for-each-step">2. Page layout for each step<a class="headerlink" href="#2-page-layout-for-each-step" title="Permanent link">&para;</a></h2>
@@ -783,7 +958,7 @@
 <li><strong>Horizontal rule</strong> before explanation (if needed).</li>
 <li><strong>Explanation section</strong>: <strong><code>### What this does</code></strong> (or “What this configuration does” only if you need the longer phrase). Use bullet points and sub-bullets; include short code snippets where they help. Do <strong>not</strong> repeat the full paste block here.</li>
 <li><strong>Checklist</strong>: <strong><code>### Checklist</code></strong> with a short bullet list of what to confirm after the step (e.g. “File defines X and Y”, “Import runs without errors”). Optionally add <strong>one line</strong> on what the reader will see or verify later (e.g. “When you run training (Step 4), the trainer will use this env” or “You’ll confirm it worked in Step 4 when you run <code>train.py</code> and training starts.”).</li>
-<li><strong>Figures</strong> (optional): <strong><code>### Figure – … (placeholder)</code></strong> with italic note like “<em>Add the actual image file under <code>docs/tutorials/&lt;tutorial-name&gt;/images/</code></em>”, then the image markdown and a <code>&gt; **Figure:**</code> caption.</li>
+<li><strong>Figures</strong> (optional): <strong><code>### Figure – … (placeholder)</code></strong> with italic note like “<em>Add the actual image file under <code>docs/tutorials/&lt;tutorial-slug&gt;/images/</code></em>”, then the image markdown and a <code>&gt; **Figure:**</code> caption.</li>
 </ol>
 <hr />
 <h2 id="3-admonitions-callouts">3. Admonitions (callouts)<a class="headerlink" href="#3-admonitions-callouts" title="Permanent link">&para;</a></h2>
@@ -808,7 +983,8 @@
 <hr />
 <h2 id="5-troubleshooting-page-format">5. Troubleshooting page format<a class="headerlink" href="#5-troubleshooting-page-format" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Start with “Where things live”</strong>: right after the intro, add one line so lost readers know where files and commands live: “All paths below are relative to <strong><code>&lt;G1_STAND_ROOT&gt;</code></strong> (the root of your extension project). For example: <code>source/g1_stand/...</code>, <code>scripts/rsl_rl/...</code>, <code>logs/rsl_rl/...</code>.”</li>
+<li><strong>Back-link (optional but recommended)</strong>: right after the intro, one line for readers who landed here from search or a link: “If you haven’t completed the steps in order, start from the <a href="../tutorials/g1-standing-ppo/">Overview</a> or <a href="../tutorials/g1-standing-ppo/env_config/">Step 1 – …</a>.” Use the actual overview and Step 1 filenames for your tutorial.</li>
+<li><strong>Then “Where things live”</strong>: one line so readers know where files and commands live: “All paths below are relative to <strong><code>&lt;G1_STAND_ROOT&gt;</code></strong> (the root of your extension project). For example: <code>source/g1_stand/...</code>, <code>scripts/rsl_rl/...</code>, <code>logs/rsl_rl/...</code>.”</li>
 <li>Use <strong><code>### Short issue name (optional code term)</code></strong> for each issue (e.g. <code>### Environment not found (UnregisteredEnv)</code>).</li>
 <li>For each issue include:</li>
 <li><strong>Symptom:</strong> (bold) then error text or description, optionally in a <code>```text</code> block.</li>
@@ -818,7 +994,7 @@
 <hr />
 <h2 id="6-navigation-and-nav-order">6. Navigation and nav order<a class="headerlink" href="#6-navigation-and-nav-order" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Add the new tutorial under <strong>Tutorials</strong> in <code>mkdocs.yml</code>, with an <strong>Overview</strong> (<code>index.md</code>) and step pages in order. Match the “Tutorial flow” list on the overview page so step numbers align.</li>
+<li>Add the new tutorial under <strong>Tutorials</strong> in <code>mkdocs.yml</code>, with an <strong>Overview</strong> (<code>index.md</code>) and step pages in order. Match the “Tutorial flow” list on the overview page so step numbers align. The overview’s tutorial flow must be <strong>clickable</strong> (each step links to its page). Rely on the theme’s sidebar and previous/next buttons for step-to-step navigation; do not add redundant “Previous: … · Next: …” at the bottom of step pages.</li>
 </ul>
 <hr />
 <h2 id="7-checklist-before-publishing">7. Checklist before publishing<a class="headerlink" href="#7-checklist-before-publishing" title="Permanent link">&para;</a></h2>
@@ -830,11 +1006,14 @@
 <li>[ ] Where “environment” means the RL task, it’s disambiguated from Python/conda env (e.g. one sentence in “What this does”).</li>
 <li>[ ] Step pages have <strong>Steps</strong> or <strong>Run</strong> → code/commands → <strong>What this does</strong> → <strong>Checklist</strong> (and optional Figure). Checklists optionally include “what you’ll see/verify in a later step.”</li>
 <li>[ ] Troubleshooting page starts with a <strong>“Where things live”</strong> line (paths relative to <code>&lt;G1_STAND_ROOT&gt;</code>).</li>
-<li>[ ] Tutorial flow on the overview page matches the step pages and nav.</li>
-<li>[ ] Overview includes a short <strong>“Why start with this task?”</strong> (or equivalent) if it’s the recommended first tutorial.</li>
+<li>[ ] Tutorial flow on the overview page matches the step pages and nav, and each step in the list is a <strong>link</strong> to its page.</li>
+<li>[ ] Overview prerequisites point to <strong>Home → Prerequisites &amp; official docs</strong> and to real resources (e.g. Robotics Fundamentals, Isaac Lab docs), not to non-existent sections like “Getting started → Installation”.</li>
+<li>[ ] Overview includes a short <strong>“Why start with this task?”</strong> (or equivalent) if it’s the recommended first tutorial; otherwise optional on the overview.</li>
 <li>[ ] Placeholder figure paths use <code>docs/tutorials/&lt;tutorial-slug&gt;/images/</code>.</li>
+<li>[ ] No in-page “Previous: … · Next: …” links at the bottom of step pages (theme provides navigation).</li>
+<li>[ ] Troubleshooting page includes the <strong>back-link</strong> line (“If you haven’t completed the steps in order, start from …”) before “Where things live.”</li>
 </ul>
-<p>Use the existing <strong>G1 standing PPO</strong> tutorial under <code>docs/tutorials/g1-standing-ppo/</code> as the reference implementation for this format.</p>
+<p>Use the existing <strong>G1 standing with PPO</strong> tutorial under <code>docs/tutorials/g1-standing-ppo/</code> as the reference implementation for this format.</p>
 
 
 
@@ -865,6 +1044,28 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../tutorials/g1-standing-ppo/troubleshooting/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Troubleshooting">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Troubleshooting
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
