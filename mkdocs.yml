@@ -50,7 +50,6 @@ nav:
           - Training: tutorials/g1-standing-ppo/training.md
           - Visualization: tutorials/g1-standing-ppo/visualization.md
           - Troubleshooting: tutorials/g1-standing-ppo/troubleshooting.md
-  - For authors: TUTORIAL_FORMAT_PROMPT.md
 
 markdown_extensions:
   - admonition
