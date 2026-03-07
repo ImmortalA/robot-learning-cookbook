@@ -123,7 +123,20 @@ mike serve
 
 ---
 
-## 5. Editing the docs
+## 5. Deploy to Netlify (with custom domain)
+
+This repo includes `netlify.toml` for one-click deploy to [Netlify](https://netlify.com).
+
+1. **Connect the repo:** Sign in to Netlify → Add new site → Import from Git → choose this repo.
+2. **Build settings** (auto-detected from `netlify.toml`):
+   - Build command: `pip install -r requirements-docs.txt && mkdocs build --strict`
+   - Publish directory: `site`
+3. **Custom domain:** After deploy, go to **Site settings → Domain management → Add custom domain** → add `mechaoctopus.com`. Netlify will show DNS records to add at your registrar (CNAME or A records).
+4. **HTTPS:** Netlify provisions a free SSL certificate automatically once the domain is verified.
+
+---
+
+## 6. Editing the docs
 
 - All content lives under `docs/`:
   - `docs/index.md` – landing page (Home)
