@@ -14,12 +14,12 @@ The docs describe how to create and train a **G1 humanoid standing task on flat 
 
 ---
 
-## 1. Install MkDocs and mkdocs-material
+## 1. Install MkDocs, Material, and mike
 
 Install the required Python packages (ideally in a docs or dev environment):
 
 ```bash
-pip install mkdocs mkdocs-material pymdown-extensions
+pip install mkdocs mkdocs-material pymdown-extensions mike
 ```
 
 These provide:
@@ -27,6 +27,7 @@ These provide:
 - `mkdocs` – the static site generator
 - `mkdocs-material` – the Material theme
 - `pymdown-extensions` – extra markdown features (superfences, details, etc.)
+- `mike` – versioned documentation publishing for MkDocs
 
 > **Note**  
 > You do **not** need Isaac Lab to be installed in the same environment as MkDocs.  
@@ -66,6 +67,12 @@ This generates:
 
 ## 4. Deploy to GitHub Pages
 
+This site uses **mike** for versioned documentation, so users can switch between versions such as:
+
+- `latest`
+- `v0.1`
+- `v0.2`
+
 There are two ways to deploy:
 
 - **Automatic deploy (recommended)** – via GitHub Actions (runs on every push to `main`)
@@ -75,29 +82,46 @@ There are two ways to deploy:
 
 This repository includes `.github/workflows/docs.yml`, which:
 
-- Installs MkDocs and dependencies
-- Builds the site
-- Publishes it to the `gh-pages` branch using `mkdocs gh-deploy`
+- Installs MkDocs, Material, and `mike`
+- Builds and publishes versioned docs to the `gh-pages` branch
+- Updates `latest` on pushes to `main`
+- Publishes tagged releases like `v0.1` and `v0.2` when you push tags
 
-Once you push to `main` on GitHub, the workflow will run and update the live site at:
+Once you push to `main` on GitHub, the workflow will run and update the `latest` version at:
 
 - `https://immortala.github.io/robot-learning-cookbook/`
 
+When you push a tag such as `v0.1`, `mike` will publish that version as a selectable entry in the version switcher.
+
 You can see workflow runs under the **Actions** tab in GitHub.
 
-### 4.2. Manual deploy with `mkdocs gh-deploy`
+### 4.2. Manual deploy with `mike`
 
 From the **repository root**:
 
 ```bash
-mkdocs gh-deploy
+mike deploy latest
+mike set-default latest
 ```
 
 This will:
 
 - Build the site
-- Push the generated static content to the `gh-pages` branch of your repository
-- Update the GitHub Pages site
+- Publish the `latest` version to the `gh-pages` branch
+- Set `latest` as the default version on GitHub Pages
+
+To publish a tagged version manually, run:
+
+```bash
+mike deploy v0.1
+mike set-default latest
+```
+
+To preview the versioned site locally, run:
+
+```bash
+mike serve
+```
 
 ---
 

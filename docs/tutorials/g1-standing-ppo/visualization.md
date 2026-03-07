@@ -36,7 +36,11 @@ Conceptually, the play environment:
 
 #### What you should see
 
-When training has gone well, you should see:
+When you run the play script, the Isaac Lab viewer opens with the G1 humanoid on a flat grid. When training has gone well, you should see:
+
+![G1 humanoid in Isaac Lab play viewer](images/unitree_g1_stand.png)
+
+> **Figure:** Unitree G1 in the Isaac Lab play environment—standing on the flat grid with the simulation viewport and scene panels.
 
 - A G1 humanoid robot spawned on a flat plane.
 - The robot generally upright, with only small corrective motions.
@@ -88,6 +92,14 @@ You should see dashboards for:
 - **Scalars** – episode rewards, losses, KL, learning rate, etc.
 - **Histograms** (if enabled) – distributions of weights/activations over time.
 
+#### What the TensorBoard view should look like
+
+When TensorBoard is reading the training logs correctly, the Scalars tab should look roughly like this:
+
+![Screenshot: TensorBoard reward charts](images/tensorboard_log.png)
+
+> **Figure:** Example TensorBoard Scalars view for the G1 standing task, showing reward curves and related training signals over time.
+
 #### Verifying that logs exist
 
 If TensorBoard says “No dashboards are active for the current data set”, check that event files exist:
@@ -111,16 +123,3 @@ ls logs/rsl_rl/g1_stand_flat/*/events.out.tfevents*
     ```bash
     tensorboard --logdir logs/rsl_rl/g1_stand_flat/2026-03-03_17-31-37/model_1400.pt
     ```
-
-### Figures – example visuals (placeholders)
-
-_Add the actual image files under `docs/tutorials/g1-standing-ppo/images/` (for example: `g1_standing_play.png`, `g1_standing_tensorboard.png`)._
-
-![Screenshot: G1 standing in play environment](images/g1_standing_play.png)
-
-> **Figure:** Example screenshot of the G1 humanoid in the flat play environment using the learned standing policy.
-
-![Screenshot: TensorBoard for G1 standing](images/g1_standing_tensorboard.png)
-
-> **Figure:** Example TensorBoard view showing scalar plots (rewards, losses) for the G1 standing training run.
-

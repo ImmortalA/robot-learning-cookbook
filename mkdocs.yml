@@ -1,6 +1,7 @@
 site_name: Robot Learning Cookbook
 site_description: "Hands-on Isaac Lab tutorials for training humanoid robots."
 site_author: "g1_stand project"
+site_url: https://immortala.github.io/robot-learning-cookbook/
 
 theme:
   name: material
@@ -32,6 +33,9 @@ markdown_extensions:
 
 extra:
   generator: false
+  version:
+    provider: mike
+    default: latest
 
   social:
     - icon: fontawesome/solid/globe
