@@ -1,10 +1,8 @@
-## G1 Stand Docs Site – MkDocs Material
+## MechaOctopus – MkDocs Material
 
-This repository contains a standalone **MkDocs Material** documentation site for the `g1_stand` Isaac Lab extension.
+**Live site:** [mechaoctopus.com](https://mechaoctopus.com)
 
-The live site is available at:
-
-- [`https://immortala.github.io/robot-learning-cookbook/`](https://immortala.github.io/robot-learning-cookbook/)
+This repository contains the **MechaOctopus** documentation site—hands-on Isaac Lab tutorials for training humanoid robots (built with MkDocs Material).
 
 - MkDocs config: `mkdocs.yml` (at repo root)
 - Docs source: `docs/`
@@ -89,7 +87,7 @@ This repository includes `.github/workflows/docs.yml`, which:
 
 Once you push to `main` on GitHub, the workflow will run and update the `latest` version at:
 
-- `https://immortala.github.io/robot-learning-cookbook/`
+- `https://mechaoctopus.com/`
 
 When you push a tag such as `v0.1`, `mike` will publish that version as a selectable entry in the version switcher.
 

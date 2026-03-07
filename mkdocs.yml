@@ -1,7 +1,7 @@
-site_name: Robot Learning Cookbook
+site_name: MechaOctopus
 site_description: "Hands-on Isaac Lab tutorials for training humanoid robots."
-site_author: "g1_stand project"
-site_url: https://immortala.github.io/robot-learning-cookbook/
+site_author: MechaOctopus
+site_url: https://mechaoctopus.com/
 
 # Repo-only; do not add to nav or under docs/ so it appears on the site.
 exclude_docs: |
@@ -66,8 +66,8 @@ markdown_extensions:
 extra:
   generator: false
   hero:
-    title: Robot Learning Cookbook
-    subtitle: Hands-on tutorials for training humanoid robots with Isaac Lab
+    title: MechaOctopus
+    subtitle: Hands-on Isaac Lab tutorials for training humanoid robots
     actions:
       - text: Start the tutorial
         link: tutorials/g1-standing-ppo/index.md
