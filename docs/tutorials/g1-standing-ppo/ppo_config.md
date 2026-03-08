@@ -1,3 +1,7 @@
+---
+description: Configure RSL-RL PPO for the G1 standing task – experiment name, max iterations, and network architecture.
+---
+
 ## Step 3 – Configure PPO for the Standing Task
 
 The `g1_stand` extension uses **RSL-RL PPO** to learn a policy that keeps the robot balanced. PPO is a good default for Isaac-style continuous‑control tasks because it:

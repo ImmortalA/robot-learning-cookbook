@@ -1,3 +1,7 @@
+---
+description: Define the G1 standing environment in Isaac Lab – subclass G1FlatEnvCfg, set zero-velocity commands, and configure standing rewards.
+---
+
 ## Step 1 – Define the Standing Environment
 
 In this step, you define **what the robot’s world looks like** and **what it is asked to do**.  

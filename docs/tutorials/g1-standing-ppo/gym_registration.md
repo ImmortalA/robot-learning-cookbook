@@ -1,3 +1,7 @@
+---
+description: Register G1-Stand-Flat-v0 and G1-Stand-Flat-Play-v0 Gym environments for Isaac Lab training and play.
+---
+
 ## Step 2 – Register Gym Environments
 
 Next, you register two Gym environments so that RSL-RL (and Gym-compatible tools) can create your task by name.  

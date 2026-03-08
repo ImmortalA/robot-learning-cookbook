@@ -1,3 +1,7 @@
+---
+description: Train the G1 standing policy with RSL-RL. Run train.py headless, monitor rewards, and use TensorBoard.
+---
+
 ## Step 4 – Train the G1 Standing Policy
 
 Once the extension is installed and the environments are registered, you can start **teaching the G1 humanoid to stand still** using the RSL-RL training script.

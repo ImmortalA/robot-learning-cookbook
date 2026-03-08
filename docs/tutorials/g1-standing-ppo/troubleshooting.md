@@ -1,3 +1,7 @@
+---
+description: Troubleshoot G1 standing – UnregisteredEnv, OOM, reward AttributeError, TensorBoard, and robot not standing still.
+---
+
 ## Step 6 – Troubleshooting the Standing Task
 
 This page collects common issues you might encounter while setting up and training the G1 standing task, along with suggested fixes.

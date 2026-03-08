@@ -6,10 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Hands-on Isaac Lab tutorials for training humanoid robots.">
+        <meta name="description" content="Hands-on Isaac Lab tutorials for training humanoid robots with NVIDIA Isaac Lab. Learn PPO, reinforcement learning, and G1 humanoid standing from scratch.">
       
       
-        <meta name="author" content="g1_stand project">
+        <meta name="author" content="MechaOctopus">
       
       
       
@@ -18,19 +18,19 @@
         
       
       
-      <link rel="icon" href="/robot-learning-cookbook/assets/images/favicon.png">
+      <link rel="icon" href="/assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
-        <title>Robot Learning Cookbook</title>
+        <title>MechaOctopus</title>
       
     
     
-      <link rel="stylesheet" href="/robot-learning-cookbook/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="/assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/robot-learning-cookbook/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="/assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +49,7 @@
       
     
     
-    <script>__md_scope=new URL("/robot-learning-cookbook/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,16 +78,12 @@
       
     </div>
     
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
-        
-      </div>
-    
     
       
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/robot-learning-cookbook/." title="Robot Learning Cookbook" class="md-header__button md-logo" aria-label="Robot Learning Cookbook" data-md-component="logo">
+    <a href="/." title="MechaOctopus" class="md-header__button md-logo" aria-label="MechaOctopus" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -101,7 +97,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Robot Learning Cookbook
+            MechaOctopus
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -120,7 +116,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -130,7 +126,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -208,7 +204,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/robot-learning-cookbook/." class="md-tabs__link">
+      <a href="/." class="md-tabs__link">
         
   
   
@@ -236,7 +232,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/robot-learning-cookbook/tutorials/g1-standing-ppo/" class="md-tabs__link">
+        <a href="/tutorials/g1-standing-ppo/" class="md-tabs__link">
           
   
   
@@ -273,13 +269,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/robot-learning-cookbook/." title="Robot Learning Cookbook" class="md-nav__button md-logo" aria-label="Robot Learning Cookbook" data-md-component="logo">
+    <a href="/." title="MechaOctopus" class="md-nav__button md-logo" aria-label="MechaOctopus" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Robot Learning Cookbook
+    MechaOctopus
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -291,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/robot-learning-cookbook/." class="md-nav__link">
+      <a href="/." class="md-nav__link">
         
   
   
@@ -422,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/robot-learning-cookbook/tutorials/g1-standing-ppo/" class="md-nav__link">
+      <a href="/tutorials/g1-standing-ppo/" class="md-nav__link">
         
   
   
@@ -450,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/robot-learning-cookbook/tutorials/g1-standing-ppo/env_config/" class="md-nav__link">
+      <a href="/tutorials/g1-standing-ppo/env_config/" class="md-nav__link">
         
   
   
@@ -478,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/robot-learning-cookbook/tutorials/g1-standing-ppo/gym_registration/" class="md-nav__link">
+      <a href="/tutorials/g1-standing-ppo/gym_registration/" class="md-nav__link">
         
   
   
@@ -506,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/robot-learning-cookbook/tutorials/g1-standing-ppo/ppo_config/" class="md-nav__link">
+      <a href="/tutorials/g1-standing-ppo/ppo_config/" class="md-nav__link">
         
   
   
@@ -534,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/robot-learning-cookbook/tutorials/g1-standing-ppo/training/" class="md-nav__link">
+      <a href="/tutorials/g1-standing-ppo/training/" class="md-nav__link">
         
   
   
@@ -562,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/robot-learning-cookbook/tutorials/g1-standing-ppo/visualization/" class="md-nav__link">
+      <a href="/tutorials/g1-standing-ppo/visualization/" class="md-nav__link">
         
   
   
@@ -590,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/robot-learning-cookbook/tutorials/g1-standing-ppo/troubleshooting/" class="md-nav__link">
+      <a href="/tutorials/g1-standing-ppo/troubleshooting/" class="md-nav__link">
         
   
   
@@ -733,10 +729,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/robot-learning-cookbook/", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "navigation.footer", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "/robot-learning-cookbook/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.top", "navigation.footer", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/robot-learning-cookbook/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="/assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

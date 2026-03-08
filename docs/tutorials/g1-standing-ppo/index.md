@@ -1,3 +1,7 @@
+---
+description: Train a Unitree G1 humanoid to stand on flat terrain using PPO in Isaac Lab. Step-by-step tutorial – env config, Gym registration, PPO, training, and visualization.
+---
+
 ## Tutorial: G1 Standing with PPO
 
 In this hands-on tutorial, you will train a **G1 humanoid** to stand still on flat terrain using **PPO** in Isaac Lab.

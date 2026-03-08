@@ -1,3 +1,7 @@
+---
+description: Visualize the learned G1 standing policy – run play.py in Isaac Lab and inspect training with TensorBoard.
+---
+
 ## Step 5 – Visualize and Inspect the Learned Policy
 
 After (or even during) training, you can:

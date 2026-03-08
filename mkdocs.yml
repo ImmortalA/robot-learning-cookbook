@@ -1,5 +1,5 @@
 site_name: MechaOctopus
-site_description: "Hands-on Isaac Lab tutorials for training humanoid robots."
+site_description: "Hands-on Isaac Lab tutorials for training humanoid robots with NVIDIA Isaac Lab. Learn PPO, reinforcement learning, and G1 humanoid standing from scratch."
 site_author: MechaOctopus
 site_url: https://mechaoctopus.com/
 
@@ -42,6 +42,10 @@ theme:
     repo: fontawesome/brands/github
   repo_url: https://github.com/ImmortalA/robot-learning-cookbook
   edit_uri: edit/main/docs/
+
+plugins:
+  - search
+  - meta
 
 nav:
   - Home: index.md
