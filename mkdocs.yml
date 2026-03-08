@@ -9,6 +9,7 @@ exclude_docs: |
 
 theme:
   name: material
+  custom_dir: overrides
   language: en
   palette:
     - scheme: default
@@ -69,6 +70,8 @@ markdown_extensions:
 
 extra:
   generator: false
+  # Single source for SEO keywords – output as <meta name="keywords"> on every page
+  seo_keywords: "robotics tutorial, humanoid robot course, humanoid robot training, robot learning, Isaac Lab tutorial, reinforcement learning tutorial, train humanoid robot, PPO reinforcement learning, Isaac Sim robotics, robot simulation, NVIDIA Isaac Lab, Unitree G1 tutorial, G1 humanoid, reinforcement learning robotics, RL robot control, robot policy training, sim-to-real robotics, Gym environment robotics, RSL-RL, robot balancing, humanoid standing control, machine learning robotics, robot locomotion tutorial, Isaac Sim tutorial, Omniverse robotics, GPU robot training"
   hero:
     title: MechaOctopus
     subtitle: Hands-on Isaac Lab tutorials for training humanoid robots

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {% if config.extra.get("seo_keywords") %}
+  <meta name="keywords" content="{{ config.extra.seo_keywords }}" />
+  {% endif %}
+  {{ super() }}
+{% endblock %}
