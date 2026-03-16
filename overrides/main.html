@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 
 {% block extrahead %}
+  <meta property="og:title" content="MechaOctopus" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mechaoctopus.com/" />
+  <meta property="og:image" content="https://mechaoctopus.com/assets/mechaoctopus.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MechaOctopus" />
+  <meta name="twitter:image" content="https://mechaoctopus.com/assets/mechaoctopus.jpeg" />
   {% if config.extra.get("seo_keywords") %}
   <meta name="keywords" content="{{ config.extra.seo_keywords }}" />
   {% endif %}
